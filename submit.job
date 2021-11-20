@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH -N 1
+#SBATCH -p RM-shared
+#SBATCH -t 10:00:00
+#SBATCH --ntasks-per-node=1
+#SBATCH --mail-user=afall@andrew.cmu.edu
+#SBATCH --mail-type=ALL
+#source /etc/profile.d/modules.sh
+module load python/3.8.6
+module load AI/anaconda3-tf1.2020.11
+set -x
+python Extract_CSV.py
